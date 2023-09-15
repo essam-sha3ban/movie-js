@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 8;
+}
+.navbar .navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    font-family: 'sen' , sans-serif;
+   
+
+}
+.navbar-container .logo{
+    flex: 2;
+    font-size: 2em;
+    color: #4bdf00
+
+}
+.navbar-container .menu{
+   flex: 6;
+}
+.navbar-container .menu ul{
+list-style: none;
+display: flex;
+
+
+}
+.navbar-container .menu ul li{
+   margin-right: 30px;
+    cursor: pointer;
+    font-size: 1.5em;
+
+}
+.navbar-container .profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 2;
+    justify-content: flex-end;
+}
+.navbar-container .profile img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.profile i.profile-menu{
+    cursor: pointer;
+}
+.profile .toggle{
+background-color: white;
+width: 40px;
+height: 20px;
+border-radius: 30px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+position: relative;
+}
+.profile .toggle i{
+    color: goldenrod;
+   
+}
+.profile .toggle .toggle-light{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    right: 1px;
+    cursor: pointer;
+    transition: .6s  linear;
+}
+.sidebar{
+    height: 100%;
+    width: 50px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    z-index: 9;
+}
+.sidebar i{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ==========start features========== */
+.container{
+background-color: #151515;
+min-height: calc(100vh - 50px);
+color: white;
+
+}
+.container .content{  
+    margin-left: 50px;  
+}
+.container .features{
+  height: 65vh;
+padding: 50px;
+margin-bottom: 100px;
+}
+
+.features .features-title{
+    width: 200px;
+   
+}
+.features .features-desc{
+    max-width: 500px;
+    margin: 15px 0;
+    color: lightgray;
+}
+.features .features-btn{
+    background-color: #4bdf00;
+    padding: 10px 20px;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movie-container{
+    padding: 0 20px ;
+    position: relative;
+}
+
+.movie-container .movie-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.movie-container .movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all .7s linear;
+   
+   
+}
+
+.movie-list .movie-item{
+    margin-right: 30px;
+    position: relative;
+  
+}
+.movie-item:hover.movie-item .movie-image{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.movie-item:hover.movie-item .movie-desc,
+.movie-item:hover.movie-item .movie-item-title,
+.movie-item:hover.movie-item .movie-btn{
+    opacity: 1;
+}
+ .movie-item .movie-image{
+    width: 270px;
+    height: 200px;
+    background-position: cover;
+    cursor: pointer;
+    transition: all .5s linear;
+    border-radius: 20px;
+    
+}
+
+.movie-item .movie-item-title{
+    background-color: #333;
+    font-size: 32px;
+    padding: 0 10px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.movie-item .movie-desc{
+    background-color: #333;
+    width: 250px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 10px;
+    opacity: 0;
+    transition: all .5s linear;
+}
+.movie-item .movie-btn{
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    color: white;
+    background-color: #4bdf00;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.movie-container .fa-chevron-right{
+    position: absolute;
+    top: 100px;
+    font-size: 100px;
+    font-weight: bold;
+    color: lightgrey;
+    right: 0;
+    opacity: .7;
+    cursor: pointer;
+}
+ .movie-container .fa-chevron-left{
+    position: absolute;
+    top: 100px;
+    font-size: 100px;
+    font-weight: bold;
+    color: lightgrey;
+    left: 0;
+    opacity: .7;
+    cursor: pointer;
+}
+/* ==========end features========== */
+
+
+/* ==========start toggle thames========== */
+.container.active{
+    background-color: white;
+}
+.movie-title.active {
+color: black;
+}
+.navbar-container.active{
+    color: black;
+    background: white;
+}
+.sidebar.active{
+    background-color: white;
+}
+.sidebar i.active{
+    color: black;
+}
+
+.profile .toggle.active{
+    background: black;
+}
+
+.profile .toggle .toggle-light.active{
+    background-color: white;
+    transform: translateX(-19px);
+}
+
+
+
+/* =====start media====== */
+
+@media(max-width:792px){
+    .navbar-container .menu{
+        display: none;
+    }
+}
+
+@media(max-width:600px){
+    .container .features{
+        height: 85vh;}
+}
+
+
